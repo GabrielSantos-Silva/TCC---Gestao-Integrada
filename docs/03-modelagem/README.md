@@ -8,7 +8,7 @@ Cada guia explica brevemente o que o diagrama representa e por que ele é import
 | Fluxo macro | [Ler guia](fluxo-macro/guia-do-diagrama.md) | Imagem, editável e documentação disponíveis. |
 | Casos de uso | [Ler guia](casos-de-uso/guia-do-diagrama.md) | Imagem, editável e catálogo disponíveis. |
 | Classes de domínio | [Ler guia](classes/guia-do-diagrama.md) | [Versão oficial em três vistas, imagens e editável](classes/README.md); pendências identificadas. |
-| Dados / DER | [Ler guia](dados/guia-do-diagrama.md) | Modelo ainda a elaborar. |
+| Dados / DER | [Ler guia](dados/guia-do-diagrama.md) | [Documentação-base, diagrama Mermaid e fonte editável](dados/README.md), em revisão pelo grupo. |
 | Atividades | [Ler guia](atividades/guia-do-diagrama.md) | Modelo ainda a elaborar. |
 | Estados | [Ler guia](estados/guia-do-diagrama.md) | Modelo ainda a elaborar. |
 | Sequência | [Ler guia](sequencia/guia-do-diagrama.md) | Modelos ainda a elaborar. |
