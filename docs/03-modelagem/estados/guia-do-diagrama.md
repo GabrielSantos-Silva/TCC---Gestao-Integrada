@@ -1,17 +1,13 @@
-# Diagramas de Estados
+# Guia dos Diagramas de Estados
 
-## O que representam
+## 1. O que representa
+Representa os estados possíveis de um objeto e os eventos ou condições que provocam mudanças entre eles ao longo de seu ciclo de vida.
 
-Mostram o ciclo de vida de um registro: suas situações possíveis, os eventos que provocam mudanças e as condições para cada transição. Enquanto atividades descrevem ações de um processo, estados descrevem a situação de uma entidade ao longo do tempo.
+## 2. Por que é importante no projeto
+Ajuda a definir o comportamento de pedidos, ordens de produção, compras e expedições, evitando transições incompatíveis com as regras operacionais.
 
-## Por que são importantes no projeto
+## 3. Exemplo no nosso sistema
+Uma OP com insuficiência de insumos aguarda reposição. Quando os insumos estão disponíveis, pode iniciar a produção e, após o registro da conclusão, passa ao estado concluído.
 
-Ajudam a impedir operações fora de hora, como iniciar produção sem insumos ou alterar um pedido depois do início da produção. Também tornam mais claros os bloqueios e as condições de conclusão.
-
-## Exemplo no nosso sistema
-
-Uma ordem com faltas deve aguardar reposição e só pode iniciar com todos os insumos disponíveis. Na conclusão integral, devem ser registradas a baixa dos insumos e a entrada dos produtos acabados.
-
-## Base para elaboração
-
-Os diagramas ainda serão elaborados. A lista completa de estados de pedidos, ordens e expedições, assim como as regras de cancelamento, depende das pendências no [escopo](../../02-requisitos/escopo-e-requisitos.md). Os exemplos acima não definem uma máquina de estados completa nem novos nomes oficiais.
+## 4. Base para elaboração
+Escopo e requisitos, casos de uso e regras de negócio. Quando o catálogo oficial de estados e transições não está definido, o desenho é identificado como proposta para validação do grupo.

@@ -1,0 +1,14 @@
+stateDiagram-v2
+    [*] --> CompraRegistrada
+    CompraRegistrada --> RecebimentoRegistrado: usuário registra recebimento físico
+    RecebimentoRegistrado --> [*]
+    note right of CompraRegistrada
+      Registrar compra não altera o estoque.
+      A compra aguarda recebimento.
+    end note
+    note right of RecebimentoRegistrado
+      Recebimento efetivo gera entrada
+      correspondente no estoque (RF10/RN06).
+      Recebimentos parciais e divergências
+      não estão definidos nesta versão.
+    end note

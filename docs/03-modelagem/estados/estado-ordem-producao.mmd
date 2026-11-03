@@ -1,0 +1,20 @@
+stateDiagram-v2
+    [*] --> Criada
+    Criada --> AguardandoReposicao: existem insumos insuficientes
+    Criada --> AptaParaInicio: insumos suficientes
+    AguardandoReposicao --> AptaParaInicio: reposição recebida e disponibilidade confirmada
+    AptaParaInicio --> EmProducao: usuário registra início
+    EmProducao --> Concluida: usuário registra conclusão / baixa e entrada de estoque
+    Concluida --> [*]
+    note right of Criada
+      Origem: pedido ou criação manual.
+      Pedido gera uma única OP, mesmo se
+      a produção planejada for zero.
+    end note
+    note right of AguardandoReposicao
+      Comportamento previsto em RN04 e RN05.
+    end note
+    note right of Concluida
+      Movimentações de consumo e entrada
+      ocorrem na conclusão (RN07 e RN08).
+    end note
