@@ -1,17 +1,13 @@
-# Diagramas de Atividades
+# Guia dos Diagramas de Atividades
 
-## O que representam
+## 1. O que representa
+Representa o fluxo de execução de um processo, mostrando ações, decisões, alternativas e a sequência das atividades.
 
-Detalham as ações e decisões de um processo, incluindo caminhos alternativos e responsabilidades. Diferentemente do fluxo macro, permitem examinar uma operação específica com suas condições. Paralelismo só deve aparecer quando fizer parte do comportamento definido.
+## 2. Por que é importante no projeto
+Permite visualizar como Comercial, PCP, Compras, Estoque, Produção e Expedição se relacionam nos processos da Gestão Integrada.
 
-## Por que são importantes no projeto
+## 3. Exemplo no nosso sistema
+Ao registrar um pedido, o sistema gera uma única OP, verifica a disponibilidade de produtos acabados, calcula a quantidade restante a produzir e verifica os insumos necessários.
 
-Ajudam a verificar se os caminhos operacionais estão completos e se os bloqueios respeitam as regras de negócio. Servem de referência para implementar e validar processos que envolvem mais de uma área.
-
-## Exemplo no nosso sistema
-
-Na verificação de uma ordem, o sistema calcula a necessidade total de insumos. Com faltas, a ordem aguarda reposição; após o recebimento, a disponibilidade é reavaliada. O início da produção permanece bloqueado enquanto faltar algum insumo necessário.
-
-## Base para elaboração
-
-Os diagramas ainda serão elaborados a partir do [fluxo macro](../fluxo-macro/README.md) e dos [fluxos dos casos de uso](../../02-requisitos/atores-casos-de-uso-regras-de-negocio.md). Não devem introduzir produção ou expedição parciais, excluídas do escopo inicial.
+## 4. Base para elaboração
+Escopo e requisitos, catálogo de casos de uso, regras RN01–RN11, fluxo macro e decisões confirmadas pelo grupo. Situações não definidas são identificadas como pendências.

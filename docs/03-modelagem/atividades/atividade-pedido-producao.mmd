@@ -1,0 +1,20 @@
+flowchart TD
+    A([Início]) --> B[Usuário registra pedido do cliente]
+    B --> C[Sistema registra pedido]
+    C --> D[Sistema gera uma única OP para o pedido]
+    D --> E[Sistema consulta disponibilidade de produtos acabados]
+    E --> F[Calcula quantidade que pode ser reservada]
+    F --> G[Registra ou considera a reserva disponível]
+    G --> H[Calcula quantidade a produzir: solicitada menos reservada]
+    H --> I{Quantidade a produzir maior que zero?}
+    I -- Não --> J[OP registrada com produção planejada igual a zero]
+    I -- Sim --> K[Sistema calcula insumos necessários pelas receitas]
+    K --> L[Compara necessidade com estoque de insumos]
+    L --> M{Todos os insumos suficientes?}
+    M -- Não --> N[Informa insuficiência; OP aguarda reposição]
+    N --> O[Usuário registra compra e recebimento]
+    O --> P[Estoque de insumos é atualizado no recebimento]
+    P --> L
+    M -- Sim --> Q[OP fica apta para início]
+    J --> R([Fim deste fluxo])
+    Q --> R

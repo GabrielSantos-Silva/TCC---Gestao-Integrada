@@ -1,0 +1,15 @@
+flowchart TD
+    A([Início]) --> B[Usuário consulta a OP]
+    B --> C[Sistema verifica disponibilidade dos insumos]
+    C --> D{Todos os insumos necessários disponíveis?}
+    D -- Não --> E[OP permanece aguardando reposição]
+    E --> F[Registrar recebimento dos insumos]
+    F --> C
+    D -- Sim --> G[Usuário registra início da produção]
+    G --> H[Produção é executada]
+    H --> I[Usuário registra conclusão da OP]
+    I --> J[Sistema registra consumo dos insumos]
+    J --> K[Sistema registra entrada dos produtos acabados]
+    K --> L[OP fica concluída]
+    L --> M([Fim])
+    G -.-> N[Início/acompanhamento não registra baixa de insumos]
