@@ -118,8 +118,8 @@ erDiagram
     }
     MOVIMENTACAO_ESTOQUE {
         int id_movimentacao PK
-        int id_produto FK, nullable
-        int id_insumo FK, nullable
+        int id_produto FK
+        int id_insumo FK
         datetime data_hora
         string tipo
         decimal quantidade
